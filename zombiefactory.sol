@@ -14,8 +14,6 @@ contract ZombieFactory {
 
     Zombie[] public zombies;
 
-    // declare mappings here
-
     function _createZombie(string _name, uint _dna) private {
         uint id = zombies.push(Zombie(_name, _dna)) - 1;
         emit NewZombie(id, _name, _dna);
